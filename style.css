@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+ counter-reset: #fff;
+}
+
+#wrapper{
+    width: 90%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(225, 225, 225, 0.08);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeIn 0.8 ease forwards;
+}
+
+@keyframes fadeIn{
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+label{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.guessField:focus{
+transform: scale(1.05);
+box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
+}
+
+.guessSubmit{
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.guessSubmit:active{
+    transform: scale(0.97);
+}
+
+.resultParas{
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.lowOrHigh{
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* .low{
+    color: #ffcc00;
+}
+
+.high{
+    color: #ff6b6b;
+}
+
+.correct{
+    color: #00ffae;
+} */
+
+@media (max-width: 480px){
+    #wrapper{
+        padding: 20px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    label{
+        font-size: 1.3rem;
+    }
+}
